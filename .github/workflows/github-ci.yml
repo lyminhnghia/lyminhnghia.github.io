@@ -2,7 +2,8 @@ name: Next.js CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build:
@@ -26,5 +27,5 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           folder: out
