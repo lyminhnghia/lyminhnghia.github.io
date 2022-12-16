@@ -1,26 +1,30 @@
-name: github CI
+name: Next.js CI
 
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
-
-    strategy:
-      matrix:
-        node-version: [16.x]
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: yarn
-        env:
-          CI: ""
-      - run: yarn build
+          node-version: 16
+          cache: yarn
+
+      - name: Build
+        run: |
+          yarn
+          yarn build
+          yarn export
+          touch out/.nojekyll
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.4.0
+        with:
+          branch: gh-pages
+          folder: out

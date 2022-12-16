@@ -10,10 +10,10 @@
   },
   "scripts": {
     "dev": "ts-node --project tsconfig.server.json server/index.ts",
-    "build": "next build && tsc --project tsconfig.server.json && next export",
+    "build": "next build && tsc --project tsconfig.server.json",
     "export": "next export",
     "start": "NODE_ENV=production && node dist/index.js",
-    "gh-deploy": "gh-pages -b gh-pages -d build",
+    "deploy": "gh-pages -b gh-pages -d build",
     "build:analyze": "ANALYZE=1 yarn build",
     "lint:css": "stylelint src/**/*.css",
     "lint": "next lint"
