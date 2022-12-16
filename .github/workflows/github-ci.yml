@@ -23,4 +23,4 @@ jobs:
       - run: yarn
         env:
           CI: ""
-      - run: yarn build --if-present
+      - run: yarn build
