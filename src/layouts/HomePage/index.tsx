@@ -11,7 +11,9 @@ const HomePage = () => {
         padding: 16,
         justifyContent: "space-between",
       }}
-    ></div>
+    >
+      Ly Minh Nghia
+    </div>
   );
 };
 

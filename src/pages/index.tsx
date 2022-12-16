@@ -10,7 +10,6 @@ const Home = () => {
         <meta name="description" content="Home" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
         <HomePageLayout />
       </main>
