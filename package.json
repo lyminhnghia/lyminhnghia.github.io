@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "homepage": "http://lyminhnghia.github.io",
+  "author": {
+    "email": "lmn2461999@gmail.com",
+    "name": "Lý Minh Nghĩa",
+    "url": "https://lyminhnghia.github.io"
+  },
   "scripts": {
     "dev": "ts-node --project tsconfig.server.json server/index.ts",
     "build": "next build && tsc --project tsconfig.server.json && next export",
