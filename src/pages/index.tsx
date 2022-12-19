@@ -1,12 +1,12 @@
 import { HomeLayout } from "layouts";
-import { HomePage } from "containers";
+import { Home } from "containers";
 
-const Home = () => {
+const RootPage = () => {
   return (
     <HomeLayout>
-      <HomePage />
+      <Home />
     </HomeLayout>
   );
 };
 
-export default Home;
+export default RootPage;
