@@ -9,43 +9,20 @@
     "url": "https://lyminhnghia.github.io"
   },
   "scripts": {
-    "dev": "ts-node --project tsconfig.server.json server/index.ts",
-    "build": "next build && tsc --project tsconfig.server.json && next export",
-    "export": "next export",
-    "start": "NODE_ENV=production && node dist/index.js",
-    "deploy": "gh-pages -b gh-pages -d build",
-    "build:analyze": "ANALYZE=1 yarn build",
-    "lint:css": "stylelint src/**/*.css",
-    "lint": "next lint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -b gh-pages -d build"
   },
   "dependencies": {
-    "@emotion/cache": "^11.10.5",
-    "@emotion/react": "^11.10.5",
-    "dotenv": "^16.0.3",
-    "gh-pages": "^4.0.0",
-    "next": "13.0.6",
+    "@next/font": "13.1.6",
+    "eslint": "8.34.0",
+    "eslint-config-next": "13.1.6",
+    "next": "13.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@next/bundle-analyzer": "^13.0.4",
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.44.0",
-    "@typescript-eslint/parser": "^5.44.0",
-    "eslint": "^8.28.0",
-    "eslint-config-next": "13.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.11",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.7.1",
-    "stylelint": "^14.15.0",
-    "stylelint-config-recommended": "^9.0.0",
-    "ts-node": "^10.9.1",
-    "typescript": "4.9.3"
+    "react-dom": "18.2.0",
+    "gh-pages": "^3.1.0"
   }
 }
