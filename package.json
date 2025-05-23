@@ -4,26 +4,22 @@
   "homepage": "http://lyminhnghia.github.io",
   "author": {
     "email": "lmn2461999@gmail.com",
-    "name": "Lý Minh Nghĩa",
+    "name": "Kevin Meann",
     "url": "https://lyminhnghia.github.io"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -b gh-pages -d build"
+    "lint": "next lint"
   },
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "next": "15.1.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/gh-pages": "^6",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
