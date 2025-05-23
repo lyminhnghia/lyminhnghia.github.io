@@ -92,6 +92,8 @@ export default function Experience() {
               title={experience.title}
               company={experience.company}
               period={experience.period}
+              location={experience.location}
+              project={experience.project}
               responsibilities={experience.responsibilities}
             />
           ))}
