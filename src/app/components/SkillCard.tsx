@@ -1,11 +1,12 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 
 interface SkillCardProps {
   name: string;
   level: number;
-  icon: string;
+  icon: ReactNode;
   index: number;
 }
 
@@ -17,9 +18,9 @@ export default function SkillCard({ name, level, icon, index }: SkillCardProps) 
       transition={{ delay: index * 0.1 }}
       className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
     >
-      <div className="flex items-center mb-4">
-        <span className="text-2xl mr-3">{icon}</span>
-        <h3 className="text-xl font-semibold">{name}</h3>
+      <div className="flex items-center gap-3 mb-4">
+        {icon}
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{name}</h3>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
         <motion.div
@@ -29,9 +30,7 @@ export default function SkillCard({ name, level, icon, index }: SkillCardProps) 
           className="bg-blue-600 h-2.5 rounded-full"
         />
       </div>
-      <div className="mt-2 text-right text-sm text-gray-600 dark:text-gray-400">
-        {level}%
-      </div>
+      <p className="text-right text-sm text-gray-600 dark:text-gray-400 mt-2">{level}%</p>
     </motion.div>
   );
-} 
+}

@@ -1,40 +1,34 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
+  transition: { duration: 0.5 },
 };
 
 export default function Hero() {
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <motion.div
-        initial="initial"
-        animate="animate"
-        variants={fadeInUp}
-        className="text-center"
-      >
-        <h1 className="text-4xl sm:text-6xl font-bold mb-4">
-          NGHIA LY MINH
-        </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300 mb-4">
-          Software Engineer
-        </p>
+      <motion.div initial="initial" animate="animate" variants={fadeInUp} className="text-center">
+        <h1 className="text-4xl sm:text-6xl font-bold mb-4">NGHIA LY MINH</h1>
+        <p className="text-xl text-gray-600 dark:text-gray-300 mb-4">Software Engineer</p>
         <div className="text-gray-600 dark:text-gray-300 mb-8 space-y-2">
           <p>Thuong Dinh ⋄ Thanh Xuan ⋄ Ha Noi ⋄ Vietnam</p>
           <p className="flex flex-wrap justify-center gap-4">
             <a href="tel:+84913098197" className="hover:text-blue-600 dark:hover:text-blue-400">
               (+84) 913 098 197
             </a>
-            <a href="mailto:physicalmeans@gmail.com" className="hover:text-blue-600 dark:hover:text-blue-400">
+            <a
+              href="mailto:physicalmeans@gmail.com"
+              className="hover:text-blue-600 dark:hover:text-blue-400"
+            >
               physicalmeans@gmail.com
             </a>
-            <a 
-              href="https://linkedin.com/in/ly-minh-nghia" 
-              target="_blank" 
+            <a
+              href="https://linkedin.com/in/ly-minh-nghia"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 dark:hover:text-blue-400"
             >
@@ -63,4 +57,4 @@ export default function Hero() {
       </motion.div>
     </section>
   );
-} 
+}

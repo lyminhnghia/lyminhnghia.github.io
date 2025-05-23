@@ -1,27 +1,28 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Lý Minh Nghĩa | Software Engineer",
-  description: "Personal portfolio showcasing my experience in UI development, software engineering, and technical skills",
-  keywords: ["Software Engineer", "React", "Next.js", "TypeScript", "Python", "FastAPI", "Node.js"],
+  title: 'Lý Minh Nghĩa | Software Engineer',
+  description:
+    'Personal portfolio showcasing my experience in UI development, software engineering, and technical skills',
+  keywords: ['Software Engineer', 'React', 'Next.js', 'TypeScript', 'Python', 'FastAPI', 'Node.js'],
 };
 
 export default function RootLayout({

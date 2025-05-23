@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
+  transition: { duration: 0.5 },
 };
 
 export default function Contact() {
@@ -20,8 +20,8 @@ export default function Contact() {
         >
           <h2 className="text-3xl font-bold mb-8">Let&apos;s Connect</h2>
           <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-            Feel free to reach out through any of the following channels.
+            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be
+            part of your vision. Feel free to reach out through any of the following channels.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.a
@@ -58,4 +58,4 @@ export default function Contact() {
       </div>
     </section>
   );
-} 
+}

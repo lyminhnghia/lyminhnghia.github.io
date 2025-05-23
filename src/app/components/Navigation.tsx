@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 
-const navItems = ["home", "skills", "experience", "projects", "contact"] as const;
+const navItems = ['home', 'skills', 'experience', 'projects', 'contact'] as const;
 
 export default function Navigation() {
-  const [activeSection, setActiveSection] = useState<typeof navItems[number]>("home");
+  const [activeSection, setActiveSection] = useState<(typeof navItems)[number]>('home');
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
@@ -20,12 +20,12 @@ export default function Navigation() {
             Lý Minh Nghĩa
           </motion.div>
           <div className="hidden sm:flex space-x-8">
-            {navItems.map((item) => (
+            {navItems.map(item => (
               <button
                 key={item}
                 onClick={() => setActiveSection(item)}
                 className={`capitalize hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${
-                  activeSection === item ? "text-blue-600 dark:text-blue-400" : ""
+                  activeSection === item ? 'text-blue-600 dark:text-blue-400' : ''
                 }`}
               >
                 {item}
@@ -36,4 +36,4 @@ export default function Navigation() {
       </div>
     </nav>
   );
-} 
+}
