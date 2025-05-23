@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Add padding for fixed header */
+}
+
 .bg-grid-pattern {
   background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
     linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
