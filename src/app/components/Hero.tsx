@@ -17,9 +17,6 @@ export default function Hero() {
         <div className="text-gray-600 dark:text-gray-300 mb-8 space-y-2">
           <p>Thuong Dinh ⋄ Thanh Xuan ⋄ Ha Noi ⋄ Vietnam</p>
           <p className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+84913098197" className="hover:text-blue-600 dark:hover:text-blue-400">
-              (+84) 913 098 197
-            </a>
             <a
               href="mailto:physicalmeans@gmail.com"
               className="hover:text-blue-600 dark:hover:text-blue-400"

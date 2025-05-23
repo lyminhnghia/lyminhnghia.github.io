@@ -42,14 +42,6 @@ export default function Contact() {
             >
               Connect on LinkedIn
             </motion.a>
-            <motion.a
-              href="tel:+84913098197"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block border border-blue-600 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-full font-medium hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
-            >
-              Call Me
-            </motion.a>
           </div>
           <p className="mt-8 text-gray-500 dark:text-gray-400">
             Based in Thuong Dinh, Thanh Xuan, Ha Noi, Vietnam
