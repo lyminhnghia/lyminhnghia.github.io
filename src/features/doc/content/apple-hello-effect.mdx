@@ -1,0 +1,111 @@
+---
+title: Apple Hello Effect
+description: SVG writing animation inspired by Apple's "Hello" screen.
+category: components
+createdAt: 2025-03-08
+updatedAt: 2026-02-20
+---
+
+<ComponentPreview
+  className="text-foreground"
+  name="apple-hello-effect-vi-demo"
+  openInV0Url="https://lyminhnghia.github.io/r/apple-hello-effect.json"
+  canReplay
+/>
+
+<ComponentPreview
+  className="text-foreground"
+  name="apple-hello-effect-en-demo"
+  openInV0Url="https://lyminhnghia.github.io/r/apple-hello-effect.json"
+  canReplay
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsListInstallType />
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @lyminhnghia/apple-hello-effect
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies</Step>
+
+```bash
+npm install motion clsx tailwind-merge
+```
+
+<Step>Add a cn helper</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible="false"
+/>
+
+<Step>Copy and paste the following code into your project</Step>
+
+<ComponentSource
+  name="apple-hello-effect"
+  title="components/apple-hello-effect.tsx"
+  showLineNumbers
+/>
+
+<Step>Update the import paths to match your project setup</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  AppleHelloVietnameseEffect,
+  AppleHelloEnglishEffect,
+} from "@/components/apple-hello-effect"
+```
+
+```tsx
+<AppleHelloVietnameseEffect />
+<AppleHelloEnglishEffect />
+```
+
+## API Reference
+
+### AppleHelloVietnameseEffect
+
+<AutoTypeTable
+  path="src/features/doc/content/props.ts"
+  name="AppleHelloEffectProps"
+/>
+
+### AppleHelloEnglishEffect
+
+<AutoTypeTable
+  path="src/features/doc/content/props.ts"
+  name="AppleHelloEffectProps"
+/>
+
+## Acknowledgments
+
+- Official Apple Hello Lettering, extracted from macOS Sonoma in SVG Form: https://www.figma.com/community/file/1414773009964314315/official-apple-hello-lettering
+- A modern animation library for JavaScript and React: https://motion.dev
+- Run your own code registry: https://ui.shadcn.com/docs/registry
+
+## References
+
+- https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/pathLength
+- https://motion.dev/docs/react-motion-component

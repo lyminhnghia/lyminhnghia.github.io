@@ -1,42 +1,140 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import "@/styles/globals.css"
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-});
+import { GoogleTagManager } from "@next/third-parties/google"
+import type { Metadata, Viewport } from "next"
+import Script from "next/script"
+import { NuqsAdapter } from "nuqs/adapters/next/app"
+import type { WebSite, WithContext } from "schema-dts"
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
+import { DuckFollower } from "@/components/duck-follower"
+import { Providers } from "@/components/providers"
+import { META_THEME_COLORS, SITE_INFO, X_USERNAME } from "@/config/site"
+import { USER } from "@/features/portfolio/data/user"
+import { fontVariables } from "@/lib/fonts"
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+function getWebSiteJsonLd(): WithContext<WebSite> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_INFO.name,
+    url: SITE_INFO.url,
+    alternateName: [USER.username],
+  }
+}
+
+// Thanks @shadcn-ui, @tailwindcss
+const darkModeScript = String.raw`
+  try {
+    if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+    }
+  } catch (_) {}
+
+  try {
+    if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+      document.documentElement.classList.add('os-macos')
+    }
+  } catch (_) {}
+`
 
 export const metadata: Metadata = {
-  title: 'Lý Minh Nghĩa | Software Engineer',
-  description:
-    'Personal portfolio showcasing my experience in UI development, software engineering, and technical skills',
-  keywords: ['Software Engineer', 'React', 'Next.js', 'TypeScript', 'Python', 'FastAPI', 'Node.js'],
-};
+  metadataBase: new URL(SITE_INFO.url),
+  title: {
+    template: `%s – ${SITE_INFO.name}`,
+    default: `${USER.displayName} – ${USER.jobTitle}`,
+  },
+  description: SITE_INFO.description,
+  keywords: SITE_INFO.keywords,
+  authors: [
+    {
+      name: USER.displayName,
+      url: SITE_INFO.url,
+    },
+  ],
+  creator: USER.username,
+  openGraph: {
+    siteName: SITE_INFO.name,
+    url: "/",
+    type: "profile",
+    locale: "en_US",
+    firstName: USER.firstName,
+    lastName: USER.lastName,
+    username: USER.username,
+    gender: USER.gender,
+    images: [
+      {
+        url: SITE_INFO.ogImage,
+        width: 1200,
+        height: 630,
+        alt: SITE_INFO.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: X_USERNAME,
+    creator: X_USERNAME,
+    images: [SITE_INFO.ogImage],
+  },
+  icons: {
+    icon: [
+      {
+        url: "https://github.com/lyminhnghia.png",
+        sizes: "any",
+      },
+    ],
+    apple: {
+      url: "https://github.com/lyminhnghia.png",
+      type: "image/png",
+      sizes: "180x180",
+    },
+  },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: META_THEME_COLORS.light,
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100`}
-      >
-        {children}
+    <html lang="en" className={fontVariables} suppressHydrationWarning>
+      <head>
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{ __html: darkModeScript }}
+        />
+        {/*
+          Thanks @tailwindcss. We inject the script via the `<Script/>` tag again,
+          since we found the regular `<script>` tag to not execute when rendering a not-found page.
+         */}
+        <Script src={`data:text/javascript;base64,${btoa(darkModeScript)}`} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getWebSiteJsonLd()).replace(/</g, "\\u003c"),
+          }}
+        />
+      </head>
+
+      {process.env.NEXT_PUBLIC_GTM_ID && (
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+      )}
+
+      <body>
+        <Providers>
+          <NuqsAdapter>
+            {children}
+            <DuckFollower />
+          </NuqsAdapter>
+        </Providers>
       </body>
     </html>
-  );
+  )
 }

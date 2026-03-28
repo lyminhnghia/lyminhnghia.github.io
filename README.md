@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nghia.ly &middot; [![GitHub License](https://img.shields.io/github/license/lyminhnghia/lyminhnghia.github.io?label=License)](https://github.com/lyminhnghia/lyminhnghia.github.io/blob/main/LICENSE)
 
-## Getting Started
+Personal portfolio, [shadcn](https://ui.shadcn.com) component registry, and blog for a Full-Stack Software Engineer.
 
-First, run the development server:
+**Live site:** [lyminhnghia.github.io](https://lyminhnghia.github.io)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/lyminhnghia/lyminhnghia.github.io.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Add your own dark/light screenshots here after deployment if you want README previews (for example images under `docs/` or your CDN).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> @TODO: Credit the upstream template here if you want attribution (link the original repository).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Overview
 
-## Learn More
+### Stack
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js 16
+- Tailwind CSS v4
+- shadcn/ui
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Featured
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Clean, modern layout with light/dark themes
+- vCard integration
+- SEO (JSON-LD, sitemap, robots)
+- AI-friendly [`/llms.txt`](https://llmstxt.org)
+- Spam-protected contact fields
+- Installable PWA
+- Optional analytics ([PostHog](https://posthog.com), [OpenPanel](https://openpanel.dev)) with [c15t](https://c15t.com) consent
 
-## Deploy on Vercel
+### Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MDX-powered docs layer:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Shared content for blog posts and component documentation
+- Category-based organization
+- Raw `.mdx` endpoints for tooling
+- Syntax-highlighted code blocks
+- Dynamic OG images
+- RSS feed
+
+### Registry
+
+Ship reusable components, hooks, and blocks with the [shadcn CLI](https://ui.shadcn.com/docs/cli), with previews, snippets, and install commands (pnpm, npm, yarn, bun).
+
+## Development
+
+See [DEVELOPMENT.md](./DEVELOPMENT.md).
+
+## License
+
+[MIT](./LICENSE). If you reuse this code, remove personal data and branding before publishing your own site.
+
+## Contributors
+
+[![Contributors](https://contrib.rocks/image?repo=lyminhnghia/lyminhnghia.github.io)](https://github.com/lyminhnghia/lyminhnghia.github.io/graphs/contributors)
+
+> Generated with [contrib.rocks](https://contrib.rocks)
+
+## Star history
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lyminhnghia/lyminhnghia.github.io&type=Date)](https://star-history.com/#lyminhnghia/lyminhnghia.github.io&Date)

@@ -1,0 +1,105 @@
+---
+title: Testimonial
+description: Display user feedback with author info, avatar, and verified badge.
+category: components
+createdAt: 2026-02-08
+updatedAt: 2026-03-27
+---
+
+<ComponentPreview
+  name="testimonial-demo"
+  openInV0Url="https://lyminhnghia.github.io/r/testimonial.json"
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsListInstallType />
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @lyminhnghia/testimonial
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies</Step>
+
+```bash
+npm install clsx tailwind-merge
+```
+
+<Step>Add a cn helper</Step>
+
+<ComponentSource
+  src="src/lib/utils.ts"
+  title="lib/utils.ts"
+  showLineNumbers
+  collapsible="false"
+/>
+
+<Step>Copy and paste the following code into your project</Step>
+
+<ComponentSource
+  name="testimonial"
+  title="components/testimonial.tsx"
+  showLineNumbers
+/>
+
+<Step>Update the import paths to match your project setup</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Testimonial,
+  TestimonialAuthor,
+  TestimonialAuthorTagline,
+  TestimonialAuthorInfo,
+  TestimonialAuthorName,
+  TestimonialAvatar,
+  TestimonialAvatarImg,
+  TestimonialAvatarRing,
+  TestimonialQuote,
+  TestimonialVerifiedBadge,
+} from "@/components/testimonial"
+```
+
+```tsx
+<MarqueeItem>
+  <Testimonial>
+    <TestimonialQuote />
+
+    <TestimonialAuthor>
+      <TestimonialAvatar>
+        <TestimonialAvatarImg />
+        <TestimonialAvatarRing />
+      </TestimonialAvatar>
+
+      <TestimonialAuthorName>
+        <TestimonialVerifiedBadge />
+      </TestimonialAuthorName>
+
+      <TestimonialAuthorTagline />
+    </TestimonialAuthor>
+  </Testimonial>
+</MarqueeItem>
+```
+
+## Examples
+
+- [testimonials-01 block](https://lyminhnghia.github.io/blocks/marketing#testimonials-01)
+- [testimonial-spotlight](https://lyminhnghia.github.io/components/testimonial-spotlight)
+- [testimonials-marquee](https://lyminhnghia.github.io/components/testimonials-marquee)

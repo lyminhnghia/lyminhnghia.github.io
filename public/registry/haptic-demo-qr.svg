@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none" aria-hidden="true">
+  <rect width="96" height="96" fill="#fafafa" rx="8" />
+  <g fill="#18181b">
+    <rect x="10" y="10" width="22" height="22" rx="2" />
+    <rect x="64" y="10" width="22" height="22" rx="2" />
+    <rect x="10" y="64" width="22" height="22" rx="2" />
+    <rect x="38" y="10" width="6" height="6" rx="1" />
+    <rect x="48" y="10" width="6" height="6" rx="1" />
+    <rect x="38" y="20" width="6" height="6" rx="1" />
+    <rect x="52" y="20" width="6" height="6" rx="1" />
+    <rect x="38" y="38" width="6" height="6" rx="1" />
+    <rect x="48" y="38" width="6" height="6" rx="1" />
+    <rect x="64" y="38" width="6" height="6" rx="1" />
+    <rect x="74" y="38" width="6" height="6" rx="1" />
+    <rect x="38" y="48" width="6" height="6" rx="1" />
+    <rect x="52" y="52" width="6" height="6" rx="1" />
+    <rect x="64" y="52" width="6" height="6" rx="1" />
+    <rect x="38" y="64" width="6" height="6" rx="1" />
+    <rect x="48" y="74" width="6" height="6" rx="1" />
+    <rect x="64" y="74" width="6" height="6" rx="1" />
+    <rect x="74" y="64" width="6" height="6" rx="1" />
+  </g>
+</svg>

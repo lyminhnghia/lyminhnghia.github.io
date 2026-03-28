@@ -1,0 +1,35 @@
+{
+  "short_name": "nghia.ly",
+  "name": "nghia.ly",
+  "description": "I'm currently a Full-Stack Software Engineer.",
+  "icons": [
+    {
+      "src": "https://github.com/lyminhnghia.png",
+      "type": "image/png",
+      "sizes": "460x460",
+      "purpose": "any"
+    },
+    {
+      "src": "https://github.com/lyminhnghia.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "https://github.com/lyminhnghia.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "https://github.com/lyminhnghia.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "id": "/?utm_source=pwa",
+  "start_url": "/?utm_source=pwa",
+  "display": "standalone",
+  "scope": "/"
+}

@@ -1,3 +1,6 @@
+# Static export to GitHub Pages. The build must emit ./out (Next output: "export").
+# configure-pages sets PAGES_BASE_PATH (empty for user/org sites like username.github.io,
+# or /repo-name for project Pages). next.config.ts reads it for basePath, assetPrefix, and export mode.
 name: Deploy Next.js site to Pages
 
 on:
@@ -38,7 +41,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
