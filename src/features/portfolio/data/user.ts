@@ -14,7 +14,7 @@ export const USER: User = {
     "Driving reliability, performance, and platform scalability.",
   ],
   address: "Ha Noi, Vietnam",
-  phoneNumber: "Kzg0OTEzMDk4MTk3",
+  phoneNumber: "",
   email: "bG1uMjQ2MTk5OUBnbWFpbC5jb20=",
   website: "https://lyminhnghia.github.io",
   jobTitle: "Senior Software Engineer",
