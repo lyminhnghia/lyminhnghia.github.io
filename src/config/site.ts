@@ -28,8 +28,8 @@ export const MAIN_NAV: NavItem[] = [
     href: "/blog",
   },
   {
-    title: "Sponsors",
-    href: "/sponsors",
+    title: "Uses",
+    href: "/uses",
   },
 ]
 

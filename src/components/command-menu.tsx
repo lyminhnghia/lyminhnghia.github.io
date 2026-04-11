@@ -13,6 +13,8 @@ import {
   CornerDownLeftIcon,
   DownloadIcon,
   FileTextIcon,
+  HandshakeIcon,
+  LaptopIcon,
   LayersIcon,
   MoonStarIcon,
   MousePointer2Icon,
@@ -82,9 +84,10 @@ const MENU_LINKS: CommandLinkItem[] = [
     icon: Icons.news,
   },
   {
-    title: "Sponsors",
-    href: "/sponsors",
-    icon: Icons.favourite,
+    title: "Uses",
+    href: "/uses",
+    icon: LaptopIcon,
+    keywords: ["tools", "setup", "stack", "editor", "workflow"],
   },
 ]
 
@@ -93,6 +96,16 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
     title: "About",
     href: "/#about",
     icon: TextInitialIcon,
+  },
+  {
+    title: "Collaboration",
+    href: "/#collaboration",
+    icon: HandshakeIcon,
+  },
+  {
+    title: "Uses",
+    href: "/uses",
+    icon: LaptopIcon,
   },
   {
     title: "Wall-of-Love",
